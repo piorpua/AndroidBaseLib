@@ -5,9 +5,9 @@ apply plugin: 'com.jfrog.bintray'
 version = "1.0.0"
 
 // 项目的主页
-def siteUrl = 'https://github.com/piorpua/AndroidLib'
+def siteUrl = 'https://github.com/piorpua/AndroidBaseLib'
 // Git 仓库的
-def gitUrl = 'https://github.com/piorpua/AndroidLib/issues'
+def gitUrl = 'https://github.com/piorpua/AndroidBaseLib.git'
 // Maven Group ID for the artifact，一般填你唯一的包名
 group = "cn.piorpua.baselib"
 
