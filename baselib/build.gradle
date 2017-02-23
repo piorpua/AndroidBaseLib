@@ -26,3 +26,5 @@ dependencies {
     compile rootProject.ext.support_appcompat
     compile rootProject.ext.support_recyclerview
 }
+
+apply from: 'bintray.gradle'
