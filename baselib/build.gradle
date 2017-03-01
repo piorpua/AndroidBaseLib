@@ -26,12 +26,17 @@ dependencies {
     compile 'com.android.support:support-annotations:25.0.0'
 }
 
+task clean(type: Delete) {
+    delete buildDir
+    delete 'gen_libs'
+}
+
 // 在终端执行生成 JAR 包
 // gradlew makeJar
 task makeJar(type: Copy) {
-    delete 'build/libs/baselib.jar'
+    delete 'gen_libs/baselib.jar'
     from('build/intermediates/bundles/release/')
-    into('build/libs/')
+    into('gen_libs/')
     include('classes.jar')
     rename ('classes.jar', 'baselib.jar')
 }
