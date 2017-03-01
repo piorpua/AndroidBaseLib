@@ -6,7 +6,8 @@ import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
 /**
- * Author: piorpua<helloworld.hnu@gmail.com>
+ * Author: piorpua<br>
+ * Mail: helloworld.hnu@gmail.com<br>
  * Date: 17/1/12
  *
  * <p>辅助类 {@link SharedPreferences}</p>

@@ -6,7 +6,8 @@ import android.os.Bundle;
 import cn.piorpua.lib.R;
 
 /**
- * Author: piorpua<helloworld.hnu@gmail.com><br>
+ * Author: piorpua<br>
+ * Mail: helloworld.hnu@gmail.com<br>
  * Date Created: 17/2/24
  *
  * <p>Brief: Demo Activity</p>

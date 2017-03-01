@@ -13,7 +13,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 /**
- * Author: piorpua<helloworld.hnu@gmail.com>
+ * Author: piorpua<br>
+ * Mail: helloworld.hnu@gmail.com<br>
  * Date Created: 16/12/15
  *
  * <p>Brief: UI 相关辅助方法</p>

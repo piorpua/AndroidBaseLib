@@ -3,7 +3,8 @@ package cn.piorpua.baselib.architecture;
 import android.app.Application;
 
 /**
- * Author: piorpua<helloworld.hnu@gmail.com><br>
+ * Author: piorpua<br>
+ * Mail: helloworld.hnu@gmail.com<br>
  * Date Created: 17/2/23
  *
  * <p>Brief: 基础 {@link Application}</p>

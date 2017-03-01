@@ -8,8 +8,10 @@ import android.support.annotation.Nullable;
 import java.lang.ref.WeakReference;
 
 /**
- * Author: piorpua<helloworld.hnu@gmail.com>
+ * Author: piorpua<br>
+ * Mail: helloworld.hnu@gmail.com<br>
  * Date: 17/1/12
+ *
  * <p>带引用的 {@link Handler}</p>
  *
  * @param <Host> 被引用对象

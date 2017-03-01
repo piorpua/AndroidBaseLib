@@ -4,7 +4,8 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 /**
- * Author: piorpua<helloworld.hnu@gmail.com><br>
+ * Author: piorpua<br>
+ * Mail: helloworld.hnu@gmail.com<br>
  * Date Created: 17/2/23
  *
  * <p>Brief: 分辨率相关辅助类</p>

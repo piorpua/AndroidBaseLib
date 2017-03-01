@@ -13,7 +13,8 @@ import java.lang.ref.WeakReference;
 import cn.piorpua.baselib.component.ReferenceHandler;
 
 /**
- * Author: piorpua<helloworld.hnu@gmail.com><br>
+ * Author: piorpua<br>
+ * Mail: helloworld.hnu@gmail.com<br>
  * Date Created: 17/1/12
  *
  * <p>Brief: MVP - <b>Presenter</b></p>

@@ -23,8 +23,18 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile rootProject.ext.support_appcompat
-    compile rootProject.ext.support_recyclerview
+    compile 'com.android.support:support-annotations:25.0.0'
 }
+
+// 在终端执行生成 JAR 包
+// gradlew makeJar
+task makeJar(type: Copy) {
+    delete 'build/libs/baselib.jar'
+    from('build/intermediates/bundles/release/')
+    into('build/libs/')
+    include('classes.jar')
+    rename ('classes.jar', 'baselib.jar')
+}
+makeJar.dependsOn(build)
 
 apply from: 'bintray.gradle'
