@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- RoundRectCheckButton -->
+    <declare-styleable name="RoundRectCheckButton">
+        <attr name="minimumHeight" format="dimension" />
+        <attr name="checkable" format="boolean" />
+        <attr name="checked" format="boolean" />
+        <attr name="iconPadding" format="dimension" />
+        <attr name="horizontalPadding" format="dimension" />
+        <attr name="verticalPadding" format="dimension" />
+        <attr name="colorUnCheck" format="color" />
+        <attr name="colorCheck" format="color" />
+        <attr name="rectStrokeWidth" format="dimension" />
+        <attr name="rectFill" format="boolean" />
+        <attr name="rectColor" format="color" />
+        <attr name="rectColorUnCheck" format="color" />
+        <attr name="rectColorCheck" format="color" />
+        <attr name="icon" format="reference" />
+        <attr name="iconUnCheck" format="reference" />
+        <attr name="iconCheck" format="reference" />
+        <attr name="drawIconStrokeWidth" format="dimension" />
+        <attr name="drawIconUnCheck" format="enum">
+            <enum name="add" value="1" />
+        </attr>
+        <attr name="drawIconCheck" format="enum">
+            <enum name="add" value="1" />
+        </attr>
+        <attr name="drawIconColorUnCheck" format="color" />
+        <attr name="drawIconColorCheck" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="textColorUnCheck" format="color" />
+        <attr name="textColorCheck" format="color" />
+        <attr name="text" format="string" />
+        <attr name="textUnCheck" format="string" />
+        <attr name="textCheck" format="string" />
+    </declare-styleable>
+</resources>
