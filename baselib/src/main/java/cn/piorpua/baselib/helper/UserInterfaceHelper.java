@@ -1,6 +1,7 @@
 package cn.piorpua.baselib.helper;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.os.Looper;
 import android.support.annotation.ColorInt;
@@ -8,15 +9,14 @@ import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
 /**
- * Author: piorpua<br>
- * Mail: helloworld.hnu@gmail.com<br>
+ * Author: piorpua<helloworld.hnu@gmail.com>
  * Date Created: 16/12/15
- *
  * <p>Brief: UI 相关辅助方法</p>
  */
 public final class UserInterfaceHelper {
@@ -107,6 +107,36 @@ public final class UserInterfaceHelper {
         }
 
         view.setCompoundDrawables(left, top, right, bottom);
+    }
+
+    /*** Recursive to {@link View#setSaveEnabled(boolean)} */
+    public static void setSaveEnabled(@Nullable View rootView, boolean enabled) {
+        if (rootView == null) {
+            return;
+        }
+
+        if (rootView instanceof ViewGroup) {
+            ViewGroup viewGroup = (ViewGroup) rootView;
+            int childCount = viewGroup.getChildCount();
+            if (childCount <= 0) {
+                return;
+            }
+
+            for (int i = 0; i < childCount; ++i) {
+                View view = viewGroup.getChildAt(i);
+                if (view == null) {
+                    continue;
+                }
+
+                if (view instanceof ViewGroup) {
+                    setSaveEnabled(view, enabled);
+                } else {
+                    view.setSaveEnabled(enabled);
+                }
+            }
+        } else {
+            rootView.setSaveEnabled(enabled);
+        }
     }
 
     /***
@@ -209,6 +239,24 @@ public final class UserInterfaceHelper {
         }
 
         return defColor;
+    }
+
+    /*** 计算文字宽度 */
+    public static float measureTextWidth(@Nullable Paint paint, @Nullable String text) {
+        if (paint == null || TextUtils.isEmpty(text)) {
+            return 0.0f;
+        }
+        return paint.measureText(text);
+    }
+
+    /*** 计算文字高度 */
+    public static float measureTextHeight(@Nullable Paint paint) {
+        if (paint == null) {
+            return 0.0f;
+        }
+
+        Paint.FontMetrics fontMetrics = paint.getFontMetrics();
+        return fontMetrics.descent - fontMetrics.ascent + fontMetrics.leading;
     }
 
     /*** 给指定字符串包装上 Html 指定标签 */
